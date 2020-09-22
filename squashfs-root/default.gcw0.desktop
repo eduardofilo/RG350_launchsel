@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Launcher selector
+Comment=Default launcher selector
+Exec=script.sh
+Icon=icon
+Categories=applications;
+Terminal=true
+
