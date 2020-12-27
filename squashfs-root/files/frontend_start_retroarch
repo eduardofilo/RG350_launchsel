@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -f /media/data/apps/retroarch_rg350.opk ]; then
+    /usr/bin/opkrun /media/data/apps/retroarch_rg350.opk
+    /usr/bin/gmenu2x
+else
+    /usr/bin/gmenu2x
+fi

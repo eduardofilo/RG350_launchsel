@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Ask for default launcher
-result=$(dialog --stdout --nocancel --title "Elige un launcher predeterminado" --menu "\nUsa [Arriba/Abajo] para seleccionar \nPulsa [Start] para confirmar\n" 0 0 0 1 "GMenu2X" 2 "SimpleMenu" 3 "PyMenu")
+result=$(dialog --stdout --nocancel --title "Elige un launcher predeterminado" --menu "\nUsa [Arriba/Abajo] para seleccionar \nPulsa [Start] para confirmar\n" 0 0 0 1 "GMenu2X" 2 "SimpleMenu" 3 "PyMenu" 4 "RetroArch")
 echo $result
 
 # Disactivate the console on framebuffer
@@ -16,6 +16,10 @@ case $result in
 
   3)
     cp files/frontend_start_pymenu /media/data/local/sbin/frontend_start
+    ;;
+
+  4)
+    cp files/frontend_start_retroarch /media/data/local/sbin/frontend_start
     ;;
 
   *)
