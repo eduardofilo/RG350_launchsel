@@ -3,123 +3,19 @@
 # External SD scaffolding
 if mount|grep -q /media/sdcard
 then
-    if [ ! -d /media/sdcard/apps ] ; then
-        mkdir /media/sdcard/apps
-    fi
-    if [ ! -d /media/sdcard/roms ] ; then
-        mkdir /media/sdcard/roms
-    fi
-    if [ ! -d /media/sdcard/roms/NEOGEO ] ; then
-        mkdir /media/sdcard/roms/NEOGEO
-    fi
-    if [ ! -d /media/sdcard/roms/CPS ] ; then
-        mkdir /media/sdcard/roms/CPS
-    fi
-    if [ ! -d /media/sdcard/roms/FBA ] ; then
-        mkdir /media/sdcard/roms/FBA
-    fi
-    if [ ! -d /media/sdcard/roms/ARCADE ] ; then
-        mkdir /media/sdcard/roms/ARCADE
-    fi
-    if [ ! -d /media/sdcard/roms/DAPHNE ] ; then
-        mkdir /media/sdcard/roms/DAPHNE
-    fi
-    if [ ! -d /media/sdcard/roms/FC ] ; then
-        mkdir /media/sdcard/roms/FC
-    fi
-    if [ ! -d /media/sdcard/roms/SFC ] ; then
-        mkdir /media/sdcard/roms/SFC
-    fi
-    if [ ! -d /media/sdcard/roms/SMS ] ; then
-        mkdir /media/sdcard/roms/SMS
-    fi
-    if [ ! -d /media/sdcard/roms/MD ] ; then
-        mkdir /media/sdcard/roms/MD
-    fi
-    if [ ! -d /media/sdcard/roms/SEGACD ] ; then
-        mkdir /media/sdcard/roms/SEGACD
-    fi
-    if [ ! -d /media/sdcard/roms/32X ] ; then
-        mkdir /media/sdcard/roms/32X
-    fi
-    if [ ! -d /media/sdcard/roms/PS ] ; then
-        mkdir /media/sdcard/roms/PS
-    fi
-    if [ ! -d /media/sdcard/roms/PCE ] ; then
-        mkdir /media/sdcard/roms/PCE
-    fi
-    if [ ! -d /media/sdcard/roms/PCECD ] ; then
-        mkdir /media/sdcard/roms/PCECD
-    fi
-    if [ ! -d /media/sdcard/roms/A2600 ] ; then
-        mkdir /media/sdcard/roms/A2600
-    fi
-    if [ ! -d /media/sdcard/roms/A5200 ] ; then
-        mkdir /media/sdcard/roms/A5200
-    fi
-    if [ ! -d /media/sdcard/roms/A7800 ] ; then
-        mkdir /media/sdcard/roms/A7800
-    fi
-    if [ ! -d /media/sdcard/roms/INTELLI ] ; then
-        mkdir /media/sdcard/roms/INTELLI
-    fi
-    if [ ! -d /media/sdcard/roms/COLECO ] ; then
-        mkdir /media/sdcard/roms/COLECO
-    fi
-    if [ ! -d /media/sdcard/roms/GB ] ; then
-        mkdir /media/sdcard/roms/GB
-    fi
-    if [ ! -d /media/sdcard/roms/GBC ] ; then
-        mkdir /media/sdcard/roms/GBC
-    fi
-    if [ ! -d /media/sdcard/roms/GBA ] ; then
-        mkdir /media/sdcard/roms/GBA
-    fi
-    if [ ! -d /media/sdcard/roms/GG ] ; then
-        mkdir /media/sdcard/roms/GG
-    fi
-    if [ ! -d /media/sdcard/roms/NGP ] ; then
-        mkdir /media/sdcard/roms/NGP
-    fi
-    if [ ! -d /media/sdcard/roms/LYNX ] ; then
-        mkdir /media/sdcard/roms/LYNX
-    fi
-    if [ ! -d /media/sdcard/roms/WSC ] ; then
-        mkdir /media/sdcard/roms/WSC
-    fi
-    if [ ! -d /media/sdcard/roms/GW ] ; then
-        mkdir /media/sdcard/roms/GW
-    fi
-    if [ ! -d /media/sdcard/roms/PICO8 ] ; then
-        mkdir /media/sdcard/roms/PICO8
-    fi
-    if [ ! -d /media/sdcard/roms/DOSBOX ] ; then
-        mkdir /media/sdcard/roms/DOSBOX
-    fi
-    if [ ! -d /media/sdcard/roms/SCUMMVM ] ; then
-        mkdir /media/sdcard/roms/SCUMMVM
-    fi
-    if [ ! -d /media/sdcard/roms/ZX ] ; then
-        mkdir /media/sdcard/roms/ZX
-    fi
-    if [ ! -d /media/sdcard/roms/AMSTRAD ] ; then
-        mkdir /media/sdcard/roms/AMSTRAD
-    fi
-    if [ ! -d /media/sdcard/roms/C64 ] ; then
-        mkdir /media/sdcard/roms/C64
-    fi
-    if [ ! -d /media/sdcard/roms/MSX ] ; then
-        mkdir /media/sdcard/roms/MSX
-    fi
-    if [ ! -d /media/sdcard/roms/AMIGA ] ; then
-        mkdir /media/sdcard/roms/AMIGA
-    fi
-    if [ ! -d /media/sdcard/OpenBOR ] ; then
-        mkdir /media/sdcard/OpenBOR
-    fi
-    if [ ! -d /media/sdcard/OpenBOR/Paks ] ; then
-        mkdir /media/sdcard/OpenBOR/Paks
-    fi
+    for dir in apps roms roms/32X roms/3DO roms/A2600 roms/A5200 roms/A7800      \
+           roms/AMIGA roms/AMSTRAD roms/ARCADE roms/C64 roms/COLECO roms/CPS     \
+           roms/DAPHNE roms/DOOM roms/DOSBOX roms/FBA roms/FC roms/GB            \
+           roms/GBA roms/GBC roms/GG roms/GW roms/INTELLI roms/LYNX roms/MD      \
+           roms/MSX roms/N64 roms/NEOGEO roms/NGP roms/PCE roms/PCECD            \
+           roms/PICO8 roms/POKEMINI roms/PS roms/QUAKE roms/SCUMMVM              \
+           roms/SEGACD roms/SFC roms/SMS roms/TIC80 roms/VB roms/VECTREX         \
+           roms/WSC roms/ZX OpenBOR OpenBOR/Paks
+    do
+      if [ ! -d "/media/sdcard/${dir}" ]; then
+        mkdir -p "/media/sdcard/${dir}"
+      fi
+    done
 fi
 
 # Ask for default launcher
