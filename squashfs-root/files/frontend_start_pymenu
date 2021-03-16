@@ -27,5 +27,9 @@ fi
 # Source /etc/profile to set the environment variables
 . /etc/profile
 
-cd /media/data/pymenu
-exec ./pymenu.dge
+if [ -f /media/data/pymenu/pymenu.dge ]; then
+    cd /media/data/pymenu
+    exec ./pymenu.dge
+else
+    /usr/bin/gmenu2x
+fi
