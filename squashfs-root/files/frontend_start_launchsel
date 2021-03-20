@@ -1,14 +1,14 @@
 #!/bin/sh
 
 # Internal SD scaffolding
-for dir in apps roms roms/32X roms/3DO roms/A2600 roms/A5200 roms/A7800      \
+for dir in apps roms roms/32X roms/A2600 roms/A5200 roms/A7800               \
        roms/AMIGA roms/AMSTRAD roms/C64 roms/COLECO roms/CPS                 \
        roms/DAPHNE roms/DOOM roms/DOSBOX roms/FBA roms/FC roms/GB            \
-       roms/GBA roms/GBC roms/GG roms/GW roms/INTELLI roms/LYNX roms/MD      \
-       roms/MSX roms/N64 roms/NEOGEO roms/NGP roms/PCE roms/PCECD            \
-       roms/PICO8 roms/POKEMINI roms/PS roms/QUAKE roms/SCUMMVM              \
-       roms/SEGACD roms/SFC roms/SMS roms/TIC80 roms/VB roms/VECTREX         \
-       roms/WSC roms/ZX roms/OPENBOR roms/MAME4ALL
+       roms/GBA roms/GBC roms/GG roms/GW roms/INTELLI roms/LYNX              \
+       roms/MAME4ALL roms/MD roms/MSX roms/NEOGEO roms/NGP roms/PCE          \
+       roms/PCECD roms/PICO8 roms/POKEMINI roms/PS roms/QUAKE roms/SCUMMVM   \
+       roms/SEGACD roms/SFC roms/SMS roms/SUPERVISION roms/TIC80 roms/VB     \
+       roms/WSC roms/ZX roms/OPENBOR
 do
   if [ ! -d "/media/data/${dir}" ]; then
     mkdir -p "/media/data/${dir}"
@@ -18,15 +18,18 @@ done
 # External SD scaffolding
 if mount|grep -q /media/sdcard
 then
-    for dir in apps roms roms/32X roms/3DO roms/A2600 roms/A5200 roms/A7800      \
-           roms/AMIGA roms/AMSTRAD roms/ARCADE roms/C64 roms/COLECO roms/CPS     \
-           roms/DAPHNE roms/DOOM roms/DOSBOX roms/FBA roms/FC roms/GB            \
-           roms/GBA roms/GBC roms/GG roms/GW roms/INTELLI roms/LYNX roms/MD      \
-           roms/MSX roms/N64 roms/NEOGEO roms/NGP roms/PCE roms/PCECD            \
-           roms/PICO8 roms/POKEMINI roms/PS roms/QUAKE roms/SCUMMVM              \
-           roms/SEGACD roms/SFC roms/SMS roms/TIC80 roms/VB roms/VECTREX         \
-           roms/WSC roms/ZX OpenBOR OpenBOR/Paks roms/MAME4ALL roms/ATARIST      \
-           roms/OUTRUN
+    for dir in roms roms/32X roms/A2600 roms/A5200 roms/A7800   \
+        roms/AMIGA roms/AMSTRAD roms/ARCADE roms/ATARIST        \
+        roms/C64 roms/COLECO roms/CPS roms/DAPHNE               \
+        roms/DOOM roms/DOSBOX roms/FBA roms/FC roms/GB          \
+        roms/GBA roms/GBC roms/GG roms/GW roms/INTELLI          \
+        roms/JAZZ roms/LYNX roms/MAME4ALL roms/MD               \
+        roms/MSX roms/NEOGEO roms/NGP roms/OUTRUN               \
+        roms/PCE roms/PCECD roms/PICO8 roms/POKEMINI            \
+        roms/PS roms/QUAKE roms/SCUMMVM roms/SEGACD             \
+        roms/SFC roms/SMS roms/SUPERVISION roms/TIC80           \
+        roms/VB roms/WSC roms/ZX OpenBOR OpenBOR/Paks           \
+        apps backups
     do
       if [ ! -d "/media/sdcard/${dir}" ]; then
         mkdir -p "/media/sdcard/${dir}"
