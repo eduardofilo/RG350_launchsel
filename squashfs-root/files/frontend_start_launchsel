@@ -8,7 +8,7 @@ for dir in apps roms roms/32X roms/A2600 roms/A5200 roms/A7800               \
        roms/MAME4ALL roms/MD roms/MSX roms/NEOGEO roms/NGP roms/PCE          \
        roms/PCECD roms/PICO8 roms/POKEMINI roms/PS roms/QUAKE roms/SCUMMVM   \
        roms/SEGACD roms/SFC roms/SMS roms/SUPERVISION roms/TIC80 roms/VB     \
-       roms/WSC roms/ZX roms/OPENBOR
+       roms/VIDEOPAC roms/WSC roms/ZX roms/OPENBOR
 do
   if [ ! -d "/media/data/${dir}" ]; then
     mkdir -p "/media/data/${dir}"
@@ -28,8 +28,8 @@ then
         roms/PCE roms/PCECD roms/PICO8 roms/POKEMINI            \
         roms/PS roms/QUAKE roms/SCUMMVM roms/SEGACD             \
         roms/SFC roms/SMS roms/SUPERVISION roms/TIC80           \
-        roms/VB roms/WSC roms/ZX OpenBOR OpenBOR/Paks           \
-        apps backups
+        roms/VB roms/VIDEOPAC roms/WSC roms/ZX OpenBOR          \
+        OpenBOR/Paks apps backups
     do
       if [ ! -d "/media/sdcard/${dir}" ]; then
         mkdir -p "/media/sdcard/${dir}"
