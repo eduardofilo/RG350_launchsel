@@ -29,7 +29,7 @@ then
         roms/PS roms/QUAKE roms/SCUMMVM roms/SEGACD             \
         roms/SFC roms/SMS roms/SUPERVISION roms/TIC80           \
         roms/VB roms/VIDEOPAC roms/WSC roms/ZX OpenBOR          \
-        OpenBOR/Paks apps backups roms/MAME2003
+        OpenBOR/Paks apps backups roms/MAME2003 roms/SOLARUS
     do
       if [ ! -d "/media/sdcard/${dir}" ]; then
         mkdir -p "/media/sdcard/${dir}"
